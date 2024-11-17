@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(223, 208, 205);
+    color: rgb(16, 3, 6);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.greetings {
+    font-size: 6rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.greeting-animation span {
+    animation: glow 2.5s ease-in-out infinite;
+    margin: 0 5px;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #060606;
+        text-shadow: 0 0 12px #0b0b06, 0 0 50px #d4dce0, 0 0 100px #101a0e;
+    }
+    10%, 90% {
+        color: #696565;
+        text-shadow: none;
+    }
+}
+
+.greeting-animation span:nth-child(1) { animation-delay: 0s; }
+.greeting-animation span:nth-child(2) { animation-delay: 0.2s; }
+.greeting-animation span:nth-child(3) { animation-delay: 0.3s; }
+.greeting-animation span:nth-child(4) { animation-delay: 0.4s; }
+.greeting-animation span:nth-child(5) { animation-delay: 0.5s; }
+.greeting-animation span:nth-child(6) { animation-delay: 0.6s; }
+.greeting-animation span:nth-child(7) { animation-delay: 0.7s; }
+.greeting-animation span:nth-child(8) { animation-delay: 0.8s; }
+.greeting-animation span:nth-child(9) { animation-delay: 0.9s; }
+
+.description {
+    font-size: 1.5rem;
+    margin: 20px;
+    color: #041048;
+    line-height: 1.6;
+}
+
+.quote {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.gift-button .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    background-color: #a59ec4;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.gift-button .btn:hover {
+    background-color: #e8eac3;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Media Queries para Responsividad */
+
+@media screen and (max-width: 1024px) {
+    .greetings {
+        font-size: 5rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .gift-button .btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .greetings {
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .gift-button .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .greetings {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .gift-button .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
